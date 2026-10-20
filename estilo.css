@@ -1,0 +1,70 @@
+/* SPESION Relieve: grafito con curvas de nivel, tinta de nieve y baliza naranja. */
+:root {
+  --canvas: #121410;
+  --surface: #191c16;
+  --hairline: #30362b;
+  --contour: #23281f;
+  --ink: #eeefe7;
+  --body: #b9beb1;
+  --muted: #8f9688;
+  --now: #cf6f19;
+  --z1: #397059;
+  --z3: #9ca652;
+  --z5: #eae5d2;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--canvas);
+  color: var(--body);
+  font: 400 1rem/1.6 ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.relief {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  color: var(--contour);
+  pointer-events: none;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 3rem; }
+header a { display: flex; align-items: center; gap: 0.75rem; color: var(--ink); text-decoration: none; font-weight: 600; letter-spacing: 0.01em; }
+.logo { width: 2rem; height: 2rem; flex: none; }
+h1 {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  text-wrap: balance;
+}
+h2 { margin: 2.5rem 0 0.5rem; color: var(--ink); font-size: 1.125rem; line-height: 1.3; letter-spacing: -0.005em; }
+p, li { max-width: 68ch; }
+p { margin: 0 0 1rem; }
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+li::marker { color: var(--muted); }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--ink); text-decoration-color: var(--hairline); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--muted); }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
+.lead { font-size: 1.125rem; color: var(--body); }
+.panel {
+  margin: 2.5rem 0 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  background: var(--surface);
+}
+.panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+.meta { color: var(--muted); font-size: 0.875rem; }
+.beacon { display: inline-block; width: 0.5rem; height: 0.5rem; margin-right: 0.5rem; border-radius: 999px; background: var(--now); vertical-align: 0.1em; }
+footer { margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 0.875rem; }
+footer a { color: var(--body); }
